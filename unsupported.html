@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <!--I'm not supporting Mosiac. I have to draw the line somewhere (That line was netscape navigator 1.0)-->
+</head>
+
+<body bgcolor="#282828" text="#FFFFFF">
+    <center>
+        <h1>Please update your browser to continue using this site!</h1>
+        <h4>You're putting yourself in danger by continueing to use this outdated browser</h4>
+    </center>
+    <script type="text/javascript">
+        if (navigator.userAgent.indexOf('Windows NT 10.0') > -1 && navigator.userAgent.toUpperCase().indexOf("TRIDENT/") != -1) {
+            var x = document.createElement("button");
+
+            var y = document.createAttribute('stype');
+            y.setAttribute('type', "text/css");
+            y.innerHTML =
+                "body {background-color: rgb(17, 17, 17);color: white;font-family: Arial, Helvetica, sans-serif;}" +
+                "button {width: 70%;text-align: center;padding: 7px;align-self: center;margin-left: 15%;margin-bottom: 10px;transition: all 0.5s;}" +
+                "button:hover {transform: scale(1.25);transition: all 0.5s;}"
+            x.setAttribute("class", "page");
+            x.setAttribute("onclick", "location.href='microsoft-edge:" + document.URL + "'")
+            x.innerHTML = "Let's try opening this page with MS Edge\n (Since I see you're on windows 10)";
+            document.body.appendChild(x);
+            document.body.appendChild(document.createElement("br"));
+        } else {
+            //This is here to help the lost souls that mistakenly landed on this address
+            var isIE = false;
+            if (!isIE) {
+                try {
+                    console.log(
+                        "test")
+                    if (!'fetch' in window || Object.freeze == null) {
+                        isIE = true;
+                    }
+                } catch (e) {
+                    isIE = true;
+                }
+            }
+            if (!isIE) {
+                //An ancient browser will fail here->Use NetScape Navigator if you want to see this page nerds!
+                window.location.replace("/");
+            }
+        }
+    </script>
+</body>
+
+</html>
