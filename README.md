@@ -14,7 +14,6 @@ No->C'mon, who uses Netscape in 2021? (When Firefox exists)
 <ul><li>Netscape Navigator 1.0+</li>
 <li>Internet explorer 3.0+ (Could not get any earlier version to function in a vm for long enought to test)</li>
 <li>Mosaic 1.0* (I don't understand how to format html for this browser, but sending the code 505 works</li>
-<li>Chrome 1.0</li>
 </ul>
 
 ## How this works 
