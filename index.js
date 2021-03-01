@@ -1,4 +1,4 @@
-//Some older browsers will mistakenly display JS as text. But if they fail the serverdie check, it's assumed they'll fail the clientside check.
+//Some older browsers will mistakenly display JS as text. But if they fail the serverside check, it's assumed they'll fail the clientside check.
 var str = String(require('fs').readFileSync('./public/unsupported.html')).replace(/<script[^>]*>(?:(?!<\/script>)[^])*<\/script>/g, "")
 app.use("/*", (req, res, next) => {
     var ua = req.get('User-Agent');
