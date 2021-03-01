@@ -1,20 +1,19 @@
-//This use to be a check for internet explorer...till I got bored
+//potentially obsolete
+
+//var isIE = navigator.userAgent.indexOf('Trident') > -1 || navigator.userAgent.indexOf('MSIE') > -1;
 var isIE = false;
-if (!isIE){
-    try{
-        //Check her for features you absolutely need in your web page. Don't forget to backport those changes to the unsupported.html page!
+if (!isIE) {
+    try {
         console.log(
             "test")
-        if (!'fetch' in window  || Object.freeze==null){
-          
+        if (!'fetch' in window) {
             isIE = true;
         }
-        }catch(e){
-            isIE = true;
-        }
+    } catch (e) {
+        isIE = true;
+    }
 }
 
 if (isIE) {
     window.location = "/unsupported.html"
-
 }
