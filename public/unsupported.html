@@ -4,7 +4,7 @@
     <!--I'm not supporting Mosiac. I have to draw the line somewhere (That line was netscape navigator 1.0)-->
 </head>
 
-<body bgcolor="#282828" text="#FFFFFF">
+<body bgcolor="#171717" text="#FFFFFF">
     <center>
         <h1>Please update your browser to continue using this site!</h1>
         <h4>You're putting yourself in danger by continueing to use this outdated browser</h4>
@@ -25,13 +25,13 @@
             document.body.appendChild(x);
             document.body.appendChild(document.createElement("br"));
         } else {
-            //This is here to help the lost souls that mistakenly landed on this page
+            //This is here to help the lost souls that mistakenly landed on this address
             var isIE = false;
             if (!isIE) {
                 try {
                     console.log(
                         "test")
-                    if (!'fetch' in window || Object.freeze == null) {
+                    if (!'fetch' in window) {
                         isIE = true;
                     }
                 } catch (e) {
